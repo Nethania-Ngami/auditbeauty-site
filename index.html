@@ -519,6 +519,84 @@
       gap: 5px;
     }
 
+
+    /* ── INSTAGRAM FIELD ── */
+    .instagram-field {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .instagram-field label {
+      display: block;
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .instagram-field .input-wrap {
+      position: relative;
+    }
+    .instagram-field .input-wrap::before {
+      content: '@';
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--green-light);
+      font-size: 15px;
+      font-weight: 600;
+      pointer-events: none;
+    }
+    .instagram-field input {
+      width: 100%;
+      padding: 13px 16px 13px 34px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      color: var(--white);
+      font-size: 15px;
+      font-family: 'Figtree', sans-serif;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .instagram-field input::placeholder { color: rgba(255,255,255,0.25); }
+    .instagram-field input:focus {
+      border-color: var(--green-light);
+      background: rgba(255,255,255,0.1);
+    }
+    .instagram-error {
+      font-size: 12px;
+      color: #e07a5f;
+      margin-top: 6px;
+      display: none;
+    }
+
+
+    .instagram-field select,
+    .instagram-field textarea {
+      width: 100%;
+      padding: 13px 16px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      color: var(--white);
+      font-size: 14px;
+      font-family: 'Figtree', sans-serif;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .instagram-field select option { background: #1a3d2b; color: white; }
+    .instagram-field textarea { resize: none; height: 80px; line-height: 1.5; }
+    .instagram-field select:focus,
+    .instagram-field textarea:focus {
+      border-color: var(--green-light);
+      background: rgba(255,255,255,0.1);
+    }
+    .instagram-field select::placeholder,
+    .instagram-field textarea::placeholder { color: rgba(255,255,255,0.25); }
+
     /* ── FAQ ── */
     .faq { background: var(--green-ultra); }
     .faq-list { max-width: 700px; margin: 60px auto 0; }
@@ -825,6 +903,41 @@
           <li>Livraison par email sous 24h</li>
         </ul>
 
+        <div class="instagram-field">
+          <label>Votre compte Instagram</label>
+          <div class="input-wrap">
+            <input type="text" id="instagram-decouverte" placeholder="votrecompte" autocomplete="off" />
+          </div>
+          <div class="instagram-error" id="error-decouverte">Veuillez remplir tous les champs avant de payer.</div>
+        </div>
+        <div class="instagram-field">
+          <label>Type de business</label>
+          <select id="type-decouverte">
+            <option value="" disabled selected>Choisissez votre activité</option>
+            <option value="Prothésiste ongulaire">Prothésiste ongulaire</option>
+            <option value="Esthéticienne">Esthéticienne</option>
+            <option value="Coiffeuse">Coiffeuse</option>
+            <option value="Lashiste">Lashiste / Sourcilière</option>
+            <option value="Maquilleuse">Maquilleuse professionnelle</option>
+            <option value="Spa / Institut">Spa / Institut de beauté</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </div>
+        <div class="instagram-field">
+          <label>Objectif principal</label>
+          <select id="goal-decouverte">
+            <option value="" disabled selected>Quel est votre objectif ?</option>
+            <option value="Avoir plus de réservations">Avoir plus de réservations</option>
+            <option value="Attirer de nouvelles clientes">Attirer de nouvelles clientes</option>
+            <option value="Fidéliser mes clientes">Fidéliser mes clientes existantes</option>
+            <option value="Augmenter mes tarifs">Augmenter mes tarifs</option>
+            <option value="Développer ma notoriété">Développer ma notoriété locale</option>
+          </select>
+        </div>
+        <div class="instagram-field">
+          <label>Décrivez votre activité <span style="color:rgba(255,255,255,0.3);font-size:10px;">(optionnel)</span></label>
+          <textarea id="desc-decouverte" placeholder="Ex: Je suis esthéticienne à Lyon spécialisée en soins du visage, je poste 3x/semaine..."></textarea>
+        </div>
         <div class="paypal-container">
           <div id="paypal-button-container-decouverte"></div>
           <div class="paypal-secure">🔒 Paiement sécurisé par PayPal</div>
@@ -850,6 +963,41 @@
           <li>Support email 7 jours après livraison</li>
         </ul>
 
+        <div class="instagram-field">
+          <label>Votre compte Instagram</label>
+          <div class="input-wrap">
+            <input type="text" id="instagram-premium" placeholder="votrecompte" autocomplete="off" />
+          </div>
+          <div class="instagram-error" id="error-premium">Veuillez remplir tous les champs avant de payer.</div>
+        </div>
+        <div class="instagram-field">
+          <label>Type de business</label>
+          <select id="type-premium">
+            <option value="" disabled selected>Choisissez votre activité</option>
+            <option value="Prothésiste ongulaire">Prothésiste ongulaire</option>
+            <option value="Esthéticienne">Esthéticienne</option>
+            <option value="Coiffeuse">Coiffeuse</option>
+            <option value="Lashiste">Lashiste / Sourcilière</option>
+            <option value="Maquilleuse">Maquilleuse professionnelle</option>
+            <option value="Spa / Institut">Spa / Institut de beauté</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </div>
+        <div class="instagram-field">
+          <label>Objectif principal</label>
+          <select id="goal-premium">
+            <option value="" disabled selected>Quel est votre objectif ?</option>
+            <option value="Avoir plus de réservations">Avoir plus de réservations</option>
+            <option value="Attirer de nouvelles clientes">Attirer de nouvelles clientes</option>
+            <option value="Fidéliser mes clientes">Fidéliser mes clientes existantes</option>
+            <option value="Augmenter mes tarifs">Augmenter mes tarifs</option>
+            <option value="Développer ma notoriété">Développer ma notoriété locale</option>
+          </select>
+        </div>
+        <div class="instagram-field">
+          <label>Décrivez votre activité <span style="color:rgba(255,255,255,0.3);font-size:10px;">(optionnel)</span></label>
+          <textarea id="desc-premium" placeholder="Ex: Je suis esthéticienne à Lyon spécialisée en soins du visage, je poste 3x/semaine..."></textarea>
+        </div>
         <div class="paypal-container">
           <div id="paypal-button-container-premium"></div>
           <div class="paypal-secure">🔒 Paiement sécurisé par PayPal</div>
@@ -919,11 +1067,11 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">AuditBeauty</div>
-  <p class="footer-text">© 2026 AuditBeauty · contact@auditbeauty.fr</p>
+  <p class="footer-text">© 2026 AuditBeauty · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dab9b5b4aebbb9ae9abbafbeb3aeb8bfbbafaea3f4bca8">[email&#160;protected]</a></p>
 </footer>
 
 <!-- SCRIPTS -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   // FAQ toggle
   document.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -945,6 +1093,29 @@
 
 <!-- PAYPAL SDK -->
 <script>
+  var N8N_WEBHOOK = 'https://n8n-s1ug.onrender.com/webhook/paypal-audit';
+
+  function envoyerWebhook(details, offre, montant, instagram, type, goal, desc) {
+    return fetch(N8N_WEBHOOK, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: details.payer.email_address,
+        nom_complet: details.payer.name.given_name + ' ' + details.payer.name.surname,
+        prenom: details.payer.name.given_name,
+        instagram: instagram,
+        plan: offre,
+        type: type,
+        goal: goal,
+        desc: desc,
+        montant: montant,
+        order_id: details.id,
+        statut: details.status,
+        date: new Date().toISOString()
+      })
+    }).catch(function(err) { console.error('Webhook N8N error:', err); });
+  }
+
   function initPayPal() {
     // ── Bouton DÉCOUVERTE 9,99€ ──
     paypal.Buttons({
@@ -957,9 +1128,27 @@
           }]
         });
       },
+      onClick: function(data, actions) {
+        var ig   = document.getElementById('instagram-decouverte').value.trim();
+        var type = document.getElementById('type-decouverte').value;
+        var goal = document.getElementById('goal-decouverte').value;
+        var err  = document.getElementById('error-decouverte');
+        if (!ig || !type || !goal) {
+          err.style.display = 'block';
+          return actions.reject();
+        }
+        err.style.display = 'none';
+        return actions.resolve();
+      },
       onApprove: function(data, actions) {
-        return actions.order.capture().then(function() {
-          window.location.href = '/merci.html';
+        return actions.order.capture().then(function(details) {
+          var ig   = document.getElementById('instagram-decouverte').value.trim();
+          var type = document.getElementById('type-decouverte').value;
+          var goal = document.getElementById('goal-decouverte').value;
+          var desc = document.getElementById('desc-decouverte').value.trim();
+          envoyerWebhook(details, 'Découverte', '9.99', ig, type, goal, desc).then(function() {
+            window.location.href = '/merci.html';
+          });
         });
       },
       onError: function(err) { console.error('PayPal error:', err); }
@@ -976,9 +1165,27 @@
           }]
         });
       },
+      onClick: function(data, actions) {
+        var ig   = document.getElementById('instagram-premium').value.trim();
+        var type = document.getElementById('type-premium').value;
+        var goal = document.getElementById('goal-premium').value;
+        var err  = document.getElementById('error-premium');
+        if (!ig || !type || !goal) {
+          err.style.display = 'block';
+          return actions.reject();
+        }
+        err.style.display = 'none';
+        return actions.resolve();
+      },
       onApprove: function(data, actions) {
-        return actions.order.capture().then(function() {
-          window.location.href = '/merci.html';
+        return actions.order.capture().then(function(details) {
+          var ig   = document.getElementById('instagram-premium').value.trim();
+          var type = document.getElementById('type-premium').value;
+          var goal = document.getElementById('goal-premium').value;
+          var desc = document.getElementById('desc-premium').value.trim();
+          envoyerWebhook(details, 'Accompagnement Complet', '47.00', ig, type, goal, desc).then(function() {
+            window.location.href = '/merci.html';
+          });
         });
       },
       onError: function(err) { console.error('PayPal error:', err); }
@@ -986,9 +1193,4 @@
   }
 </script>
 <script
-  src="https://www.paypal.com/sdk/js?client-id=AZhiG5DptOB76xT2rsXAtxDXE1CzyTTkFxeH_eWtPiGZEfMRvp6NS65H_92KrpBCvS7dY078N_6_omRB&currency=EUR&locale=fr_FR&components=buttons&enable-funding=card"
-  onload="initPayPal()"
-></script>
-
-</body>
-</html>
+  src="https:
