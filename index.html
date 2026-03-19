@@ -597,6 +597,29 @@
     .instagram-field select::placeholder,
     .instagram-field textarea::placeholder { color: rgba(255,255,255,0.25); }
 
+
+    .btn-reserver {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--green-light);
+      color: var(--green-deep);
+      text-decoration: none;
+      padding: 16px 28px;
+      border-radius: 100px;
+      font-size: 16px;
+      font-weight: 700;
+      transition: all 0.3s;
+      margin-bottom: 10px;
+    }
+    .btn-reserver:hover {
+      background: #6fcf97;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(82,183,136,0.4);
+    }
+
     /* ── FAQ ── */
     .faq { background: var(--green-ultra); }
     .faq-list { max-width: 700px; margin: 60px auto 0; }
@@ -949,8 +972,8 @@
         <div class="pricing-badge popular">⭐ Plus populaire</div>
         <div class="pricing-title">Accompagnement Complet</div>
         <div class="pricing-desc">Audit + stratégie marketing personnalisée pour transformer votre Instagram en machine à réservations.</div>
-        <div class="pricing-amount"><sup>€</sup>47</div>
-        <div class="pricing-note">Paiement unique · Livraison sous 48h</div>
+        <div class="pricing-amount" style="font-size:52px;padding:10px 0;">Appel<br><em style="color:var(--green-light);font-style:italic;">Gratuit</em></div>
+        <div class="pricing-note">Appel gratuit · Sans engagement · 30 minutes</div>
 
         <ul class="pricing-features">
           <li>Tout ce qui est inclus dans l'offre Découverte</li>
@@ -998,10 +1021,10 @@
           <label>Décrivez votre activité <span style="color:rgba(255,255,255,0.3);font-size:10px;">(optionnel)</span></label>
           <textarea id="desc-premium" placeholder="Ex: Je suis esthéticienne à Lyon spécialisée en soins du visage, je poste 3x/semaine..."></textarea>
         </div>
-        <div class="paypal-container">
-          <div id="paypal-button-container-premium"></div>
-          <div class="paypal-secure">🔒 Paiement sécurisé par PayPal</div>
-        </div>
+        <a href="https://calendar.app.google/SiFodTPyLfJayk3K8" target="_blank" class="btn-reserver">
+          📅 Réserver mon appel gratuit
+        </a>
+        <div class="paypal-secure">✨ Appel stratégique offert — sans engagement</div>
       </div>
 
     </div>
